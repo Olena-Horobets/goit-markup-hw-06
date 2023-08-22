@@ -15,19 +15,9 @@
 
 body {
 	font-family: var(--main-font);
-	color: var(--navyblue);
+	background-color: var(--white);
+	color: var(--slate);
 	letter-spacing: 0.04;
-}
-
-a {
-	text-decoration: none;
-	color: currentColor;
-	font-style: normal;
-}
-
-ul {
-	padding: 0;
-	list-style: none;
 }
 
 button {
@@ -36,34 +26,35 @@ button {
 	font-family: inherit;
 }
 
-.header {
-	padding-left: var(--section-padding);
-	padding-right: var(--section-padding);
+.link {
+	text-decoration: none;
+	color: currentColor;
+	font-style: normal;
 }
 
-.nav {
-	display: flex;
+.list {
+	list-style: none;
 }
 
 .logo {
 	font-family: var(--logo-font);
 	font-size: 18px;
 	font-weight: 800;
+	line-height: 1.17;
+	letter-spacing: 0.03em;
 	text-transform: uppercase;
-
+	color: var(--iris);
 	margin-right: 76px;
 }
 
 .logo-accent {
-	color: var(--iris);
-}
-
-.main-nav {
-	display: flex;
+	color: var(--navyblue);
 }
 
 .main-nav-link {
 	cursor: pointer;
+	color: var(--navyblue);
+	font-weight: 500;
 }
 
 .main-nav-link:hover,
@@ -78,9 +69,6 @@ button {
 
 .hero {
 	background-color: var(--navyblue);
-	padding-top: 188px;
-	padding-bottom: 188px;
-	text-align: center;
 }
 
 .hero-title {
@@ -91,16 +79,12 @@ button {
 }
 
 .hero-button {
-	padding: 16px 32px;
-	border-radius: 4px;
-
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 1.5;
 
 	color: var(--white);
 	background-color: var(--iris);
-	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 	cursor: pointer;
 }
 
@@ -113,13 +97,31 @@ button {
 	visibility: hidden;
 }
 
+.advantages-subtitle {
+	color: var(--navyblue);
+	font-size: 20px;
+	font-weight: 500;
+}
+
 .advantages-text {
-	color: var(--slate);
 	letter-spacing: 0.2;
 }
 
+.services-title {
+	color: var(--navyblue);
+}
+
+.team-title {
+	color: var(--navyblue);
+}
+
+.team-subtitle {
+	color: var(--navyblue);
+	font-size: 20px;
+	font-weight: 500;
+}
+
 .team-text {
-	color: var(--slate);
 	letter-spacing: 0.2;
 }
 
@@ -128,11 +130,13 @@ button {
 	color: var(--white);
 }
 
+.footer .logo-accent {
+	color: var(--white);
+}
+
 .portfolio-button {
-	padding: 12px 24px;
 	background-color: var(--cloud);
 	border: 1px solid var(--cornflower);
-	border-radius: 4px;
 	color: var(--iris);
 	font-size: 16px;
 	font-weight: 500;
@@ -143,11 +147,10 @@ button {
 	color: var(--white);
 	background-color: var(--ocean);
 	border: 1px solid var(--ocean);
-	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
-		0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .portfolio-gallery-title {
+	color: var(--navyblue);
 	font-size: 20px;
 	font-weight: 500;
 }
