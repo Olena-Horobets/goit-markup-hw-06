@@ -1,5 +1,5 @@
 :root {
-	--logo-font: Raleway;
+	--logo-font: Raleway, sans-serif;
 	--main-font: Roboto, sans-serif;
 
 	--section-padding: 156px;
@@ -55,11 +55,17 @@ button {
 	cursor: pointer;
 	color: var(--navyblue);
 	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
 }
 
 .main-nav-link:hover,
 .main-nav-link:focus {
 	color: var(--ocean);
+}
+
+.contacts {
+	font-style: normal;
 }
 
 .contacts-link:hover,
@@ -74,6 +80,8 @@ button {
 .hero-title {
 	color: var(--white);
 	font-size: 56px;
+	text-align: center;
+	letter-spacing: 0.02em;
 	line-height: 1.07;
 	letter-spacing: 0.02;
 }
@@ -82,6 +90,7 @@ button {
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 1.5;
+	letter-spacing: 0.04em;
 
 	color: var(--white);
 	background-color: var(--iris);
@@ -101,10 +110,13 @@ button {
 	color: var(--navyblue);
 	font-size: 20px;
 	font-weight: 500;
+	letter-spacing: 0.02em;
+	line-height: 1.2;
 }
 
 .advantages-text {
-	letter-spacing: 0.2;
+	letter-spacing: 0.02em;
+	line-height: 1.5;
 }
 
 .services-title {
