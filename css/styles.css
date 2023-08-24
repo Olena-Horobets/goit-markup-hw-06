@@ -68,6 +68,11 @@ button {
 	font-style: normal;
 }
 
+.contacts-link {
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+}
+
 .contacts-link:hover,
 .contacts-link:focus {
 	color: var(--ocean);
@@ -119,31 +124,47 @@ button {
 	line-height: 1.5;
 }
 
-.services-title {
+.title {
+	font-size: 36px;
+	line-height: 1.11;
+	text-align: center;
+	text-transform: capitalize;
 	color: var(--navyblue);
 }
 
-.team-title {
-	color: var(--navyblue);
+.team {
+	background-color: #f4f4fd;
+}
+
+.team-item {
+	background-color: #fff;
 }
 
 .team-subtitle {
 	color: var(--navyblue);
 	font-size: 20px;
 	font-weight: 500;
+	line-height: 1.2;
+	letter-spacing: 0.02em;
 }
 
 .team-text {
-	letter-spacing: 0.2;
+	letter-spacing: 0.02em;
+	line-height: 1.5;
 }
 
 .footer {
 	background-color: var(--navyblue);
-	color: var(--white);
+	color: var(--cloud);
 }
 
 .footer .logo-accent {
-	color: var(--white);
+	color: var(--cloud);
+}
+
+.footer-text {
+	line-height: 1.5;
+	letter-spacing: 0.02em;
 }
 
 .portfolio-button {
@@ -152,6 +173,8 @@ button {
 	color: var(--iris);
 	font-size: 16px;
 	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: 0.04em;
 }
 
 .portfolio-button:hover,
@@ -165,4 +188,11 @@ button {
 	color: var(--navyblue);
 	font-size: 20px;
 	font-weight: 500;
+	line-height: 1.2;
+	letter-spacing: 0.02em;
+}
+
+.portfolio-gallery-text {
+	font-size: 16px;
+	line-height: 1.5;
 }
