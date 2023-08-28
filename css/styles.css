@@ -1,3 +1,4 @@
+/*#region utilities */
 :root {
 	--logo-font: Raleway, sans-serif;
 	--main-font: Roboto, sans-serif;
@@ -26,6 +27,43 @@ button {
 	font-family: inherit;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1158px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .link {
 	text-decoration: none;
 	color: currentColor;
@@ -34,9 +72,28 @@ button {
 
 .list {
 	list-style: none;
+	padding: 0px;
+}
+/*#endregion utilities */
+
+/*#region header */
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	gap: 76px;
 }
 
 .logo {
+	padding-top: 24px;
+	padding-bottom: 24px;
+
 	font-family: var(--logo-font);
 	font-size: 18px;
 	font-weight: 800;
@@ -44,11 +101,17 @@ button {
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
 	color: var(--iris);
-	margin-right: 76px;
 }
 
 .logo-accent {
 	color: var(--navyblue);
+}
+
+.main-nav {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	gap: 40px;
 }
 
 .main-nav-link {
@@ -57,6 +120,8 @@ button {
 	font-weight: 500;
 	line-height: 1.5;
 	letter-spacing: 0.02em;
+	padding-top: 24px;
+	padding-bottom: 24px;
 }
 
 .main-nav-link:hover,
@@ -64,11 +129,19 @@ button {
 	color: var(--ocean);
 }
 
-.contacts {
+.contacts-list {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	gap: 40px;
+
 	font-style: normal;
 }
 
 .contacts-link {
+	padding-top: 24px;
+	padding-bottom: 24px;
+
 	line-height: 1.5;
 	letter-spacing: 0.02em;
 }
@@ -77,6 +150,7 @@ button {
 .contacts-link:focus {
 	color: var(--ocean);
 }
+/*#endregion header */
 
 .hero {
 	background-color: var(--navyblue);
@@ -105,10 +179,6 @@ button {
 .hero-button:hover,
 .hero-button:focus {
 	background-color: var(--ocean);
-}
-
-.advantages-title {
-	visibility: hidden;
 }
 
 .advantages-subtitle {
