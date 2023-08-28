@@ -62,6 +62,7 @@ img {
 	padding-right: 15px;
 	margin-left: auto;
 	margin-right: auto;
+	border: 2px solid red;
 }
 
 .link {
@@ -73,6 +74,18 @@ img {
 .list {
 	list-style: none;
 	padding: 0px;
+	margin: 0px;
+}
+
+.title {
+	margin-bottom: 72px;
+
+	font-size: 36px;
+	line-height: 1.11;
+	text-align: center;
+	text-transform: capitalize;
+	color: var(--navyblue);
+	letter-spacing: 0.02em;
 }
 /*#endregion utilities */
 
@@ -152,11 +165,18 @@ img {
 }
 /*#endregion header */
 
+/*#region hero */
 .hero {
+	padding-top: 188px;
+	padding-bottom: 188px;
+	text-align: center;
+
 	background-color: var(--navyblue);
 }
 
 .hero-title {
+	margin-bottom: 48px;
+
 	color: var(--white);
 	font-size: 56px;
 	text-align: center;
@@ -166,6 +186,8 @@ img {
 }
 
 .hero-button {
+	padding: 16px 32px;
+
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 1.5;
@@ -174,14 +196,34 @@ img {
 	color: var(--white);
 	background-color: var(--iris);
 	cursor: pointer;
+	border-radius: 4px;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .hero-button:hover,
 .hero-button:focus {
 	background-color: var(--ocean);
 }
+/*#endregion hero */
+
+/*#region advantages */
+.advantages {
+	padding-top: 120px;
+	padding-bottom: 60px;
+}
+
+.advantages-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.advantages-item {
+	flex-basis: calc((100% - 24px * 3) / 4);
+}
 
 .advantages-subtitle {
+	margin-bottom: 8px;
+
 	color: var(--navyblue);
 	font-size: 20px;
 	font-weight: 500;
@@ -193,15 +235,19 @@ img {
 	letter-spacing: 0.02em;
 	line-height: 1.5;
 }
+/*#endregion advantages */
 
-.title {
-	font-size: 36px;
-	line-height: 1.11;
-	text-align: center;
-	text-transform: capitalize;
-	color: var(--navyblue);
-	letter-spacing: 0.02em;
+/*#region services */
+.services {
+	padding-top: 60px;
+	padding-bottom: 120px;
 }
+
+.services-list {
+	display: flex;
+	justify-content: space-between;
+}
+/*#endregion services */
 
 .team {
 	background-color: #f4f4fd;
