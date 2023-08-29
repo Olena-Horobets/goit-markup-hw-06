@@ -104,12 +104,13 @@ img {
 	display: flex;
 	justify-content: start;
 	align-items: center;
-	gap: 76px;
 }
 
 .logo {
+	display: inline-block;
 	padding-top: 24px;
 	padding-bottom: 24px;
+	margin-right: 76px;
 
 	font-family: var(--logo-font);
 	font-size: 18px;
@@ -173,13 +174,13 @@ img {
 .hero {
 	padding-top: 188px;
 	padding-bottom: 188px;
-	text-align: center;
 
 	background-color: var(--navyblue);
 }
 
 .hero-title {
-	margin-bottom: 48px;
+	margin: 0px auto 48px;
+	max-width: 496px;
 
 	color: var(--white);
 	font-size: 56px;
@@ -190,7 +191,10 @@ img {
 }
 
 .hero-button {
+	display: block;
+	margin: 0px auto;
 	padding: 16px 32px;
+	min-width: 169px;
 
 	font-size: 16px;
 	font-weight: 500;
@@ -212,13 +216,12 @@ img {
 
 /*#region advantages */
 .advantages {
-	padding-top: 120px;
-	padding-bottom: 60px;
+	padding: 120px 0;
 }
 
 .advantages-list {
 	display: flex;
-	justify-content: space-between;
+	gap: 24px;
 }
 
 .advantages-item {
@@ -243,13 +246,12 @@ img {
 
 /*#region services */
 .services {
-	padding-top: 60px;
 	padding-bottom: 120px;
 }
 
 .services-list {
 	display: flex;
-	justify-content: space-between;
+	gap: 24px;
 }
 /*#endregion services */
 
@@ -262,12 +264,12 @@ img {
 
 .team-list {
 	display: flex;
-	justify-content: space-between;
+	gap: 24px;
 }
 
 .team-item {
 	overflow: hidden;
-	border-radius: 4px;
+	border-radius: 0px 0px 4px 4px;
 	background-color: #fff;
 	box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
 		0px 1px 1px 0px rgba(46, 47, 66, 0.16),
@@ -275,7 +277,7 @@ img {
 }
 
 .team-text-wrapper {
-	margin: 32px auto;
+	padding: 32px 0;
 	text-align: center;
 }
 
@@ -304,9 +306,8 @@ img {
 }
 
 .footer .logo {
-	display: block;
 	padding: 0;
-	margin-bottom: 18px;
+	margin: 0px 0px 16px;
 }
 
 .footer .logo-accent {
@@ -351,7 +352,7 @@ img {
 .portfolio-button:focus {
 	color: var(--white);
 	background-color: var(--ocean);
-	border: 1px solid var(--ocean);
+	border: 1px solid transparent;
 }
 
 .portfolio-gallery {
@@ -363,14 +364,16 @@ img {
 
 .portfolio-gallery-item {
 	flex-basis: calc((100% - 24px * 2) / 3);
-	border: 1px solid var(--cornflower);
 }
 
 .portfolio-item-wrapper {
-	margin: 32px 16px;
+	padding: 32px 16px;
+	border: 1px solid var(--cornflower);
 }
 
 .portfolio-gallery-title {
+	margin-bottom: 8px;
+
 	color: var(--navyblue);
 	font-size: 20px;
 	font-weight: 500;
