@@ -176,6 +176,14 @@ img {
 	padding-bottom: 188px;
 
 	background-color: var(--navyblue);
+	background-image: linear-gradient(
+			rgba(46, 47, 66, 0.7),
+			rgba(46, 47, 66, 0.7)
+		),
+		url("/images/hero_bg.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
 .hero-title {
@@ -226,6 +234,34 @@ img {
 
 .advantages-item {
 	flex-basis: calc((100% - 24px * 3) / 4);
+}
+
+.advantages-item::before {
+	content: "";
+	display: block;
+	height: 120px;
+	background-color: var(--cloud);
+	border-radius: 4px;
+	margin-bottom: 8px;
+	background-size: auto;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.advantages-item:nth-child(1)::before {
+	background-image: url(/images/advantages/antenna.svg);
+}
+
+.advantages-item:nth-child(2)::before {
+	background-image: url(/images/advantages/clock.svg);
+}
+
+.advantages-item:nth-child(3)::before {
+	background-image: url(/images/advantages/diagram.svg);
+}
+
+.advantages-item:nth-child(4)::before {
+	background-image: url(/images/advantages/astronaut.svg);
 }
 
 .advantages-subtitle {
