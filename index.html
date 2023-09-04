@@ -60,7 +60,9 @@
 			<section id="hero" class="hero">
 				<div class="container">
 					<h1 class="hero-title">Effective Solutions for Your Business</h1>
-					<button type="button" class="hero-button">Order Service</button>
+					<button type="button" class="hero-button" data-modal-open>
+						Order Service
+					</button>
 				</div>
 			</section>
 
@@ -410,6 +412,16 @@
 					</ul>
 				</div>
 			</section>
+
+			<div class="backdrop is-hidden" data-modal>
+				<div class="modal">
+					<button class="modal-btn" type="button" data-modal-close>
+						<svg class="modal-btn-icon" width="8" height="8">
+							<use href="./images/sprite.svg#icon-cross"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
 		</main>
 
 		<footer class="footer">
@@ -473,5 +485,7 @@
 				</div>
 			</div>
 		</footer>
+
+		<script src="./js/modal.js" type="module"></script>
 	</body>
 </html>
