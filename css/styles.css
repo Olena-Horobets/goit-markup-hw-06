@@ -10,6 +10,7 @@
 	--ocean: #404bbf;
 	--white: #fff;
 	--slate: #434455;
+	--light-slate: #8e8f99;
 	--cloud: #f4f4fd;
 	--cornflower: #e7e9fc;
 	--green: #31d0aa;
@@ -386,6 +387,34 @@ img {
 }
 
 /*#endregion team */
+
+/*#region customers */
+.customers {
+	padding: 120px 0;
+}
+
+.customers-list {
+	display: flex;
+	gap: 24px;
+}
+
+.customers-link {
+	display: flex;
+	justify-content: center;
+	border: 1px solid currentColor;
+	border-radius: 4px;
+	width: 168px;
+	height: 88px;
+	color: var(--light-slate);
+
+	transition: var(--main-animation);
+}
+
+.customers-link:hover,
+.customers-link:focus {
+	color: var(--ocean);
+}
+/*#endregion customers */
 
 /*#region footer */
 .footer {
