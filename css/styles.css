@@ -395,6 +395,10 @@ img {
 	color: var(--cloud);
 }
 
+.footer-container {
+	display: flex;
+}
+
 .footer .logo {
 	padding: 0;
 	margin: 0px 0px 16px;
@@ -409,6 +413,29 @@ img {
 
 	line-height: 1.5;
 	letter-spacing: 0.02em;
+}
+
+.footer-socials-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	width: 208px;
+	margin-left: 120px;
+}
+
+.footer-socials-title {
+	margin-bottom: 16px;
+
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1.5em;
+	letter-spacing: 0.02em;
+	color: var(--white);
+}
+
+.footer .socials-list {
+	gap: 16px;
 }
 /*#endregion footer */
 
@@ -436,6 +463,8 @@ img {
 	font-weight: 500;
 	line-height: 1.5;
 	letter-spacing: 0.04em;
+
+	transition: var(--main-animation);
 }
 
 .portfolio-button:hover,
