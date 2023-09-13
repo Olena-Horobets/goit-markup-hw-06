@@ -169,12 +169,14 @@ img {
 }
 
 .main-nav-link:hover,
-.main-nav-link:focus {
+.main-nav-link:focus,
+.main-nav-link.current {
 	color: var(--ocean);
 }
 
 .main-nav-link:hover::after,
-.main-nav-link:focus::after {
+.main-nav-link:focus::after,
+.main-nav-link.current::after {
 	transform: scaleX(100%);
 }
 
