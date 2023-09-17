@@ -16,6 +16,10 @@
 	--green: #31d0aa;
 	--navyblue-modal: rgba(46, 47, 66, 0.4);
 	--dairy: #fcfcfc;
+	--hero-gradient: linear-gradient(
+		rgba(46, 47, 66, 0.7),
+		rgba(46, 47, 66, 0.7)
+	);
 
 	--main-animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -68,7 +72,6 @@ img {
 	padding-right: 16px;
 	margin-left: auto;
 	margin-right: auto;
-	outline: 1px solid red;
 }
 @media screen and (min-width: 768px) {
 	.container {
@@ -148,13 +151,13 @@ img {
 
 .nav {
 	display: flex;
-	justify-content: space-between;
-	width: 100%;
+	justify-content: start;
 	align-items: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767.98px) {
 	.nav {
-		justify-content: start;
+		justify-content: space-between;
+		width: 100%;
 	}
 }
 
@@ -305,11 +308,7 @@ img {
 	margin: 0 auto;
 
 	background-color: var(--navyblue);
-	background-image: linear-gradient(
-			rgba(46, 47, 66, 0.7),
-			rgba(46, 47, 66, 0.7)
-		),
-		url("../images/hero-bg.jpg");
+	background-image: var(--hero-gradient), url(../images/hero/hero_mob.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -318,6 +317,43 @@ img {
 	.hero {
 		padding-top: 188px;
 		padding-bottom: 188px;
+	}
+}
+/* mobile retina screens bgr */
+@media only screen and (min-device-pixel-ratio: 2),
+	(min-resolution: 192dpi),
+	(min-resolution: 2dppx) {
+	.hero {
+		background-image: var(--hero-gradient), url(../images/hero/hero_mob@2x.jpg);
+	}
+}
+/* tablet screens bgr */
+@media only screen and (min-width: 768px) {
+	.hero {
+		background-image: var(--hero-gradient), url(../images/hero/hero_tablet.jpg);
+	}
+}
+/* tablet retina screens bgr  */
+@media only screen and (min-width: 768px) and (min-resolution: 192dpi),
+	(min-width: 768px) and (min-device-pixel-ratio: 2),
+	(min-width: 768px) and (min-resolution: 2dppx) {
+	.hero {
+		background-image: var(--hero-gradient),
+			url(../images/hero/hero_tablet@2x.jpg);
+	}
+}
+/* desktop screens bgr  */
+@media only screen and (min-width: 1158px) {
+	.hero {
+		background-image: var(--hero-gradient), url(../images/hero/hero_desk.jpg);
+	}
+}
+/* desktop retina screens bgr */
+@media only screen and (min-width: 1158px) and (min-resolution: 192dpi),
+	(min-width: 1168px) and (min-device-pixel-ratio: 2),
+	(min-width: 1168px) and (min-resolution: 2dppx) {
+	.hero {
+		background-image: var(--hero-gradient), url(../images/hero/hero_desk@2x.jpg);
 	}
 }
 
@@ -337,7 +373,7 @@ img {
 		margin: 0px auto 36px;
 		max-width: 496px;
 
-		font-size: 36px;
+		font-size: 56px;
 	}
 }
 @media screen and (min-width: 1158px) {
@@ -1014,19 +1050,42 @@ img {
 
 /*#region portfolio */
 .portfolio {
-	padding-top: 96px;
-	padding-bottom: 120px;
+	padding: 48px 0;
+}
+@media screen and (min-width: 768px) {
+	.portfolio {
+		padding: 64px 0 96px;
+	}
+}
+@media screen and (min-width: 1158px) {
+	.portfolio {
+		padding: 100px 0 120px;
+	}
 }
 
 .portfolio-nav {
 	display: flex;
+	flex-wrap: wrap;
+	max-width: 270px;
 	gap: 24px;
-	justify-content: center;
-	margin-bottom: 72px;
+	justify-content: flex-start;
+	margin-bottom: 48px;
+}
+@media screen and (min-width: 768px) {
+	.portfolio-nav {
+		max-width: 100%;
+		justify-content: center;
+		margin-bottom: 64px;
+	}
+}
+@media screen and (min-width: 1158px) {
+	.portfolio-nav {
+		margin-bottom: 72px;
+	}
 }
 
 .portfolio-button {
-	padding: 12px 24px;
+	padding: 8px 16px;
 	border-radius: 4px;
 
 	background-color: var(--cloud);
@@ -1040,6 +1099,11 @@ img {
 	transition: color var(--main-animation),
 		background-color var(--main-animation), border-color var(--main-animation),
 		box-shadow var(--main-animation);
+}
+@media screen and (min-width: 768px) {
+	.portfolio-button {
+		padding: 12px 24px;
+	}
 }
 
 .portfolio-button:hover,
@@ -1057,9 +1121,24 @@ img {
 	row-gap: 48px;
 	column-gap: 24px;
 }
+@media screen and (min-width: 768px) and (max-width: 1157.98px) {
+	.portfolio-gallery {
+		row-gap: 72px;
+	}
+}
 
 .portfolio-gallery-item {
-	flex-basis: calc((100% - 24px * 2) / 3);
+	flex-basis: 100%;
+}
+@media screen and (min-width: 768px) {
+	.portfolio-gallery-item {
+		flex-basis: calc((100% - 24px) / 2);
+	}
+}
+@media screen and (min-width: 1158px) {
+	.portfolio-gallery-item {
+		flex-basis: calc((100% - 24px * 2) / 3);
+	}
 }
 
 .portfolio-gallery-link {
@@ -1086,6 +1165,10 @@ img {
 	width: 100%;
 	height: 300px;
 	overflow: hidden;
+}
+
+.portfolio-gallery-img {
+	width: 100%;
 }
 
 .portfolio-overlay-text {
