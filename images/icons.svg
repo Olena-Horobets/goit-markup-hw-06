@@ -12,9 +12,7 @@
 <symbol id="icon-input-person" viewBox="0 0 32 32">
 <path d="M16 16c2.946 0 5.333-2.388 5.333-5.333s-2.388-5.333-5.333-5.333v0c-2.946 0-5.333 2.388-5.333 5.333s2.388 5.333 5.333 5.333v0zM16 18.667c-3.561 0-10.667 1.787-10.667 5.333v1.333c0 0.732 0.599 1.333 1.333 1.333h18.667c0.732 0 1.333-0.601 1.333-1.333v-1.333c0-3.547-7.108-5.333-10.667-5.333z"></path>
 </symbol>
-<symbol id="icon-menu-burger" viewBox="0 0 32 32">
-<path d="M6.4 11.733v-2.133h19.2v2.133h-19.2zM6.4 17.067h19.2v-2.133h-19.2v2.133zM6.4 22.4h19.2v-2.133h-19.2v2.133z"></path>
-</symbol>
+<symbol id="icon-burger" fill="none"><g clip-path="url(#a)"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M1.348 20.043h29.539M1.348 10.735h29.539M1.348 1.428h29.539"/></g><defs><clipPath id="a"><path  d="M0 0h32v22H0z"/></clipPath></defs></symbol>
 <symbol id="icon-cross" viewBox="0 0 8 8" fill="none">
 <path d="M8 0.805714L7.19429 0L4 3.19429L0.805714 0L0 0.805714L3.19429 4L0 7.19429L0.805714 8L4 4.80571L7.19429 8L8 7.19429L4.80571 4L8 0.805714Z" fill="currentColor"/>
 </symbol>

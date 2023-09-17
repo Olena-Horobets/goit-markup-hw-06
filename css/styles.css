@@ -148,15 +148,20 @@ img {
 
 .nav {
 	display: flex;
-	justify-content: start;
+	justify-content: space-between;
+	width: 100%;
 	align-items: center;
+}
+@media screen and (min-width: 768px) {
+	.nav {
+		justify-content: start;
+	}
 }
 
 .logo {
 	display: inline-block;
 	padding-top: 24px;
 	padding-bottom: 24px;
-	margin-right: 76px;
 
 	font-family: var(--logo-font);
 	font-size: 18px;
@@ -166,18 +171,34 @@ img {
 	text-transform: uppercase;
 	color: var(--iris);
 }
+@media screen and (min-width: 768px) {
+	.logo {
+		margin-right: 120px;
+	}
+}
+@media screen and (min-width: 1158px) {
+	.logo {
+		margin-right: 76px;
+	}
+}
 
 .logo-accent {
 	color: var(--navyblue);
 }
 
 .main-nav {
-	display: flex;
-	justify-content: start;
-	align-items: center;
-	gap: 40px;
+	display: none;
 }
-
+@media screen and (min-width: 768px) {
+	.main-nav {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		gap: 40px;
+	}
+}
+@media screen and (min-width: 1158px) {
+}
 .main-nav-link {
 	position: relative;
 
@@ -218,28 +239,62 @@ img {
 	transform: scaleX(100%);
 }
 
+.contacts {
+	display: none;
+}
+@media screen and (min-width: 768px) {
+	.contacts {
+		display: initial;
+	}
+}
+
 .contacts-list {
 	display: flex;
-	justify-content: start;
-	align-items: center;
-	gap: 40px;
-
-	font-style: normal;
+	flex-direction: column;
+}
+@media screen and (min-width: 1158px) {
+	.contacts-list {
+		flex-direction: row;
+		justify-content: start;
+		align-items: center;
+		gap: 40px;
+	}
 }
 
 .contacts-link {
-	padding-top: 24px;
-	padding-bottom: 24px;
+	display: inline-block;
+	padding: 6px 0;
 
-	line-height: 1.5;
+	font-style: normal;
+	font-size: 12px;
+	line-height: 1.17;
 	letter-spacing: 0.02em;
 	transition: color var(--main-animation);
+}
+@media screen and (min-width: 1158px) {
+	.contacts-link {
+		padding: 24px 0;
+		font-size: 16px;
+		line-height: 1.5;
+	}
 }
 
 .contacts-link:hover,
 .contacts-link:focus {
 	color: var(--ocean);
 }
+
+.burger-btn {
+	background-color: transparent;
+	padding: 0;
+	color: var(--navyblue);
+}
+@media screen and (min-width: 768px) {
+	.burger-btn {
+		display: none;
+	}
+}
+
 /*#endregion header */
 
 /*#region hero */
@@ -553,7 +608,7 @@ img {
 	transform: translate(-50%, -50%) scale(1);
 	width: 408px;
 	min-height: 584px;
-	padding: 72px 24px 24px;
+	padding: 72px 16px 16px;
 
 	text-align: center;
 	border-radius: 4px;
@@ -562,6 +617,11 @@ img {
 		0px 2px 1px rgba(0, 0, 0, 0.2);
 
 	transition: transform var(--main-animation);
+}
+@media screen and (min-width: 768px) {
+	.modal {
+		padding: 72px 24px 24px;
+	}
 }
 
 .backdrop.is-hidden .modal {
