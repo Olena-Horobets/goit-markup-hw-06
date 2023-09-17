@@ -70,13 +70,11 @@ img {
 	margin-right: auto;
 	outline: 1px solid red;
 }
-
 @media screen and (min-width: 768px) {
 	.container {
 		max-width: 768px;
 	}
 }
-
 @media screen and (min-width: 1158px) {
 	.container {
 		max-width: 1158px;
@@ -261,7 +259,6 @@ img {
 	background-position: center;
 	background-size: cover;
 }
-
 @media screen and (min-width: 1158px) {
 	.hero {
 		padding-top: 188px;
@@ -280,7 +277,6 @@ img {
 	line-height: 1.07;
 	letter-spacing: 0.02;
 }
-
 @media screen and (min-width: 768px) {
 	.hero-title {
 		margin: 0px auto 36px;
@@ -289,7 +285,6 @@ img {
 		font-size: 36px;
 	}
 }
-
 @media screen and (min-width: 1158px) {
 	.hero-title {
 		margin: 0px auto 48px;
@@ -379,7 +374,13 @@ img {
 
 /*#region services */
 .services {
-	padding-bottom: 120px;
+	display: none;
+}
+@media screen and (min-width: 1158px) {
+	.services {
+		display: initial;
+		padding-bottom: 120px;
+	}
 }
 
 .services-list {
@@ -390,14 +391,27 @@ img {
 
 /*#region team */
 .team {
-	padding: 120px 0px;
+	padding: 96px 0px;
 
 	background-color: #f4f4fd;
+}
+@media screen and (min-width: 1158px) {
+	.team {
+		padding: 120px 0px;
+	}
 }
 
 .team-list {
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	gap: 24px;
+	row-gap: 72px;
+}
+@media screen and (min-width: 768px) {
+	.team-list {
+		row-gap: 64px;
+	}
 }
 
 .team-item {
