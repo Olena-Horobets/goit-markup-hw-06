@@ -24,6 +24,10 @@
 	--main-animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: var(--main-font);
 	background-color: var(--white);
@@ -631,6 +635,10 @@ img {
 	transition: opacity var(--main-animation), visibility var(--main-animation);
 }
 
+body.backdrop-is-open {
+	overflow-y: hidden;
+}
+
 .backdrop.is-hidden {
 	opacity: 0;
 	visibility: hidden;
@@ -695,8 +703,6 @@ img {
 }
 
 .modal-btn-icon {
-	fill: currentColor;
-
 	transition: fill var(--main-animation);
 }
 
@@ -798,8 +804,8 @@ img {
 	font-size: 12px;
 	line-height: 1.17;
 	letter-spacing: 0.04em;
-	color: rgba(46, 47, 66, 0.4);
-	border: 1px solid rgba(46, 47, 66, 0.4);
+	color: var(--navyblue-modal);
+	border: 1px solid var(--navyblue-modal);
 	background-color: transparent;
 	border-radius: 4px;
 	outline: transparent;
@@ -853,6 +859,96 @@ img {
 }
 
 /*#endregion modal */
+
+/* #region mobile menu */
+.menu-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+	padding: 80px 40px 40px;
+	background-color: var(--white);
+	z-index: 999;
+
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 1.1;
+	letter-spacing: 0.02em;
+
+	transform: translateX(100%);
+	transition: transform var(--main-animation);
+}
+@media screen and (max-width: 432px) {
+	.menu-container {
+		padding: 80px 30px 40px;
+	}
+}
+@media screen and (max-width: 375px) {
+	.menu-container {
+		padding: 80px 20px 40px;
+	}
+}
+
+.menu-container.is-open {
+	transform: translateX(0);
+}
+
+.menu-close-icon {
+	transition: fill var(--main-animation);
+}
+
+.mob-menu-item:not(:last-child) {
+	margin-bottom: 40px;
+}
+
+.mob-menu-link {
+	color: var(--navyblue);
+}
+
+.mob-menu-link:hover,
+.mob-menu-link:focus {
+	color: var(--ocean);
+}
+
+.mob-menu-contacts {
+	margin-bottom: 48px;
+	margin-top: auto;
+}
+
+.mob-menu-contacts-link {
+	color: var(--iris);
+}
+@media screen and (max-width: 432px) {
+	.mob-menu-contacts-link {
+		font-size: 32px;
+	}
+}
+@media screen and (max-width: 375px) {
+	.mob-menu-contacts-link {
+		font-size: 28px;
+		letter-spacing: 0.01em;
+	}
+}
+
+.mob-menu-contacts-link:not(:last-child) {
+	margin-bottom: 40px;
+}
+
+.mob-menu-contacts-link.email {
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.2;
+	color: var(--slate);
+}
+
+.menu-container .socials-list {
+	justify-content: space-between;
+	max-width: 328px;
+}
+/* #endregion mobile menu */
 
 /*#region footer */
 .footer {
@@ -1163,12 +1259,17 @@ img {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 300px;
+	height: 280px;
 	overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+	.portfolio-overlay-wrapper {
+		height: 300px;
+	}
 }
 
 .portfolio-gallery-img {
-	width: 100%;
+	object-fit: cover;
 }
 
 .portfolio-overlay-text {
